@@ -1,0 +1,139 @@
+p,h2,h3,h4,h5,h6,a  {color: #EEEEEE;}
+hr {background-color: #ffffff; border:2px solid #ffffff;}
+body {background-color: #1e1f1f;} 
+
+/* Navbar css code */
+
+.navbar {
+    color: #ffffff;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 35px);
+    top: 0;
+    width: 100%;
+    padding: 5px 10px;
+    z-index: 1000;
+    justify-content: center;
+    height: 50px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.navbar_button{
+    display: flex;
+    width: 200px;
+    background-color: #1c1c1b73;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    flex-shrink: 1;
+    white-space: nowrap;
+}
+
+.navbar_button:hover {
+    background-color: #ffffff;
+    color: #c46900;
+    cursor: pointer;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+    transform: translateY(10px);
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+    /* Navbar for phone style */
+
+@media only screen and (max-width: 576px) {
+    .navbar_button{
+    display: none;
+}
+}
+
+.centre {text-align: center}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+}
+
+
+.monolith {
+    grid-column: span 3;
+    width: 100%;
+}
+
+.monolith_text {
+    grid-column: 4 / 12;
+    width: 100%;
+    position: center;
+}
+
+/* Phone styles */
+@media only screen and (max-width: 576px) {
+    .monolith {
+    display: none;
+    }  
+    .monolith_text {
+    grid-column: span 12;
+    width: 100%;
+    position: center;
+    }
+}
+
+
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    border: 3px solid #ff0000;
+    color: #ff0000;
+  }
+
+.pic {
+    background: url("../images/abyss.png") center / cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.container {position: relative;
+margin: 0 auto;
+text-align: center;}
+
+
+.container_img {
+    width: 20%;
+    height: auto;
+    image-rendering: pixelated;
+    margin: 50px 10%;
+}
+
+.bg_pic {
+    
+    background: no-repeat center url("../images/abyss_Bg.png");
+    background-size: 100%; 
+    background-size: cover; 
+   
+    background-color: #e30909;
+
+}
