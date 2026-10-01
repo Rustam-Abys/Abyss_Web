@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abyss</title>
     <link href="css/Clan.css" rel="stylesheet" type="text/css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -29,55 +30,51 @@
       </a>
   </header>
 
-
-
-
   <!-- First picture  -->  
 
   <div class="pic">
-
     <div class="container">
       <h1 style="color: rgb(244, 238, 238); font-size: 100px; text-shadow: 0 0 10px #f8f5f5;"> Abyss </h1>
+      <button id="scroll-btn" class="submerge">
+        Погрузиться
+      </button>
     </div>
+  </div>
+
+  <!-- Platoe section -->
+
+<section class="platoe_zone" style="background-color: #5B5353;" id="target-block">
+    <div class="platoe_layer platoe_main_surface"></div>
+    <div class="platoe_layer platoe_main_left"></div>
+    <div class="platoe_layer platoe_bg0"></div>
+
+    <div class="platoe_layer platoe_bg3 platoe_moving"></div>
+    <div class="platoe_layer platoe_bg2 platoe_moving"></div>
+    <div class="platoe_layer platoe_bg1 platoe_moving"></div>
+    <div class="platoe_layer platoe_bg4 platoe_moving"></div>
+
+  <div class="platoe_text_1">
+      <h1>Великое плато</h1>
+    <h2>
+      Это первое место, куда попали исследователи после открытия портала в бездну.
+      По всему плато расположенны многочисленные монолиты неизвесного происхождения. Записи пока рассшифрованы не были
+    </h2>
+ </div>
+</section>
+
+<section class="platoe_zone" style="background-color: #502323; top: 100px;" >
+  <div class="platoe_layer platoe_main_crystal"></div>
+
+  <div class="platoe_text_2">
+    <h1>Навигационный Кристалл</h1>
+    <h2>
+      На плато также оюноруженны кристаллы красного цвета с неизвестной структурой.
+      Этот артефакт, разработка исследователей, был создан для того, чтобы ориентироваться в Бездне.
+      Он позволяет видеть карту Бездны и отмечать на ней важные объекты. Кристалл был создан из неизвестного материала, который не поддается анализу.
+    </h2>
 
   </div>
-  <hr>  
 
-    <!-- Quote when start  -->
-    <h2 class="centre">"Ты не можешь убежать от неизвестного"</h2>
-
-    <hr>
-
-    <!-- what is abyss -->
-
-    <div class="bg_pic">
-      <div style="padding: 20px 40px;">
-        <div class="grid-container" style="align-items: center;">
-          
-          <img class="monolith" src="images/Abyss_monolith1B.png" alt="Abyss Monolith" style="image-rendering: pixelated;">
-          
-          <div class="monolith_text" >
-            <h2>Введение</h2>
-            <p>Однажды в мире начали появлятся неизвесные разломы. 
-              При попадании в них человек переносится в место которое мы прохвали Бездной.
-              Через некоторое время мы смогли открыть портал в этот мир. И мы начали исследовать его.
-            </p>
-          </div>
-
-          <!-- <div class="monolith_mobile">
-             <img class="monolith" src="images/Abyss_monolith1B.png" alt="Abyss Monolith" style="image-rendering: pixelated;">
-          </div> -->
-
-        </div>
-      </div>  
-    </div>
-
-
-
-
-
-<div class="fixed" color="white">
-  Beta version 0.5.0
-  </div>
+</section>
 
 </body>

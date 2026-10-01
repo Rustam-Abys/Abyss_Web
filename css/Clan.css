@@ -1,6 +1,6 @@
 p,h2,h3,h4,h5,h6,a  {color: #EEEEEE;}
 hr {background-color: #ffffff; border:2px solid #ffffff;}
-body {background-color: #1e1f1f;} 
+body {background-color: #000000;} 
 
 /* Navbar css code */
 
@@ -50,6 +50,11 @@ body {background-color: #1e1f1f;}
     transform: translateY(10px);
 }
 
+.logo:hover {
+    cursor: pointer;
+    background-color: #cf1b1b;
+}
+
 .logo img {
     display: block;
     width: 100%;
@@ -64,6 +69,13 @@ body {background-color: #1e1f1f;}
     display: none;
 }
 }
+
+.submerge{
+    color: #ff0b0b;
+    background-color: #1c1c1b00;
+    border: 2px solid #e90505;
+}
+
 
 .centre {text-align: center}
 
@@ -98,15 +110,6 @@ body {background-color: #1e1f1f;}
 }
 
 
-div.fixed {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100px;
-    border: 3px solid #ff0000;
-    color: #ff0000;
-  }
-
 .pic {
     background: url("../images/abyss.png") center / cover no-repeat;
     height: 100vh;
@@ -116,24 +119,158 @@ div.fixed {
     top: 0;
 }
 
-.container {position: relative;
-margin: 0 auto;
-text-align: center;}
+.container {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;}
 
 
 .container_img {
     width: 20%;
     height: auto;
-    image-rendering: pixelated;
     margin: 50px 10%;
 }
 
-.bg_pic {
-    
-    background: no-repeat center url("../images/abyss_Bg.png");
-    background-size: 100%; 
-    background-size: cover; 
-   
-    background-color: #e30909;
 
+    /* Platoe zone css code ------------------------------------------- */
+ 
+ .platoe_zone {
+    position: relative;
+    min-height: 750px;
+    overflow: hidden;
+    isolation: isolate;
 }
+
+/* Общие настройки всех фоновых слоёв */
+.platoe_layer {
+    position: absolute;
+
+    /* Положение и высота слоя */
+    top: var(--y, 0px);
+    left: 0;
+    width: 100%;
+    height: var(--height, 400px);
+
+    /* Размер картинки не зависит от высоты секции */
+    background-image: var(--image);
+    background-size: var(--tile-width, 1000px) auto;
+    background-position: 0 top;
+    background-repeat: repeat-x;
+
+    z-index: var(--z, 0);
+    pointer-events: none;
+}
+
+.platoe_moving {
+    animation: moveRight var(--speed, 60s) linear infinite;
+}
+
+/* Неподвижная картинка плато */
+.platoe_main_surface {
+    --image: url("../images/platoe.png");
+    --y: 0px;
+    --height: 100%;
+    --tile-width: 200vh;
+    --z: 10;
+    background-repeat: repeat-x;
+    background-position: right top;
+}
+
+.platoe_main_crystal {
+    --image: url("../images/platoe2.png");
+    --y: 0px;
+    --height: 100%;
+    --tile-width: 100vw;
+    --z: 10;
+    background-repeat: repeat-x;
+    background-position: left top;
+}
+
+
+.platoe_bg0 {
+    --image: url("../images/bg_platoe_0.png");
+    --y: 0px;
+    --height: 300px;
+    --tile-width: 1000px;
+    --z: 4;
+}
+
+.platoe_bg1 {
+    --image: url("../images/bg_platoe_1.png");
+    --y: 15px;
+    --height: 850px;
+    --tile-width: 1500px;
+    --speed: 60s;
+    --z: 3;
+}
+
+.platoe_bg2 {
+    --image: url("../images/bg_platoe_2.png");
+    --y: 90px;
+    --height: 750px;
+    --tile-width: 1200px;
+    --speed: 35s;
+    --z: 2;
+}
+
+.platoe_bg3 {
+    --image: url("../images/bg_platoe_3.png");
+    --y: 200px;
+    --height: 850px;
+    --tile-width: 900px;
+    --speed: 20s;
+    --z: 1;
+}
+
+.platoe_bg4 {
+    --image: url("../images/bg_platoe_4.png");
+    --y: 50vh;
+    --height: 850px;
+    --tile-width: 1000px;
+    --speed: 15s;
+    --z: 0;
+}
+
+@keyframes moveRight {
+    from {
+        background-position: 0 top;
+    }
+    to {
+        background-position: var(--tile-width, 1000px) top;
+    }
+}
+
+.platoe_text_1 {
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 1000;
+    text-align: left;
+    color: rgb(244, 238, 238);
+    text-shadow: 0 0 10px #f8f5f5;
+    width: 60%;
+    padding: 175px 10vw;
+}
+
+@media only screen and (max-width: 800px) {
+    .platoe_text_1 {
+    font-size: 1rem;
+    position: relative;
+    z-index: 1000;
+    text-align: left;
+    color: rgb(244, 238, 238);
+    text-shadow: 0 0 10px #f8f5f5;
+    width: 80%;
+}
+}
+
+.platoe_text_2 {
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 1000;
+    text-align: left;
+    color: rgb(244, 238, 238);
+    text-shadow: 0 0 10px #f8f5f5;
+    width: 60%;
+    padding: 225px 500px;
+}
+
