@@ -139,6 +139,7 @@ body {background-color: #000000;}
     min-height: 750px;
     overflow: hidden;
     isolation: isolate;
+    height: 100vh;
 }
 
 /* Общие настройки всех фоновых слоёв */
@@ -168,7 +169,7 @@ body {background-color: #000000;}
 /* Неподвижная картинка плато */
 .platoe_main_surface {
     --image: url("../images/platoe.png");
-    --y: 0px;
+    --y: -75px;
     --height: 100%;
     --tile-width: 200vh;
     --z: 10;
@@ -180,12 +181,11 @@ body {background-color: #000000;}
     --image: url("../images/platoe2.png");
     --y: 0px;
     --height: 100%;
-    --tile-width: 100vw;
+    --tile-width: 200vh;
     --z: 10;
     background-repeat: repeat-x;
     background-position: left top;
 }
-
 
 .platoe_bg0 {
     --image: url("../images/bg_platoe_0.png");
@@ -232,12 +232,8 @@ body {background-color: #000000;}
 }
 
 @keyframes moveRight {
-    from {
-        background-position: 0 top;
-    }
-    to {
-        background-position: var(--tile-width, 1000px) top;
-    }
+    from {background-position: 0 top;}
+    to {background-position: var(--tile-width, 1000px) top;}
 }
 
 .platoe_text_1 {
@@ -251,6 +247,17 @@ body {background-color: #000000;}
     padding: 175px 10vw;
 }
 
+.platoe_text_2 {
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 1000;
+    color: rgb(244, 238, 238);
+    text-shadow: 0 0 10px #f8f5f5;
+    width: 60%;
+    padding: 175px 50px 0px 0px;
+    margin-left: auto;
+}
+
 @media only screen and (max-width: 800px) {
     .platoe_text_1 {
     font-size: 1rem;
@@ -260,17 +267,16 @@ body {background-color: #000000;}
     color: rgb(244, 238, 238);
     text-shadow: 0 0 10px #f8f5f5;
     width: 80%;
-}
-}
-
-.platoe_text_2 {
-    font-size: 1.25rem;
+    }
+    .platoe_text_2 {
+    font-size: 1rem;
     position: relative;
     z-index: 1000;
-    text-align: left;
     color: rgb(244, 238, 238);
     text-shadow: 0 0 10px #f8f5f5;
-    width: 60%;
-    padding: 225px 500px;
+    width: 80%;
+    margin-left: auto;
+    }
+
 }
 
